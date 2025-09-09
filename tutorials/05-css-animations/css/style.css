@@ -1,8 +1,23 @@
+body{
+ animation: change-color 4s infinite alternate;
+}
+@keyframes change-color {
+    0% {background-color: rgb(255, 203, 252);}
+    50% {background-color: #84eafe;}
+    100% {background-color: bisque;}
+}
+
 .title {
     font-family: 'Courier New', Courier, monospace;
     margin: 50px;
+    text-align: center;
+    animation: skew 3s infinite alternate
 }
 
+@keyframes skew {
+    0% {transform: skew(0deg, 0deg)}
+    100% {transform: skew(30deg, 20deg)}
+}
 .square {
     background-color: purple;
     width: 200px;
@@ -36,4 +51,15 @@
     background-color: antiquewhite;
     color: black;
     transform: scale(1.5);
+}
+
+.loading {
+    background-color: darkorchid;
+    color: white;
+    animation: stretch 5s infinite alternate;
+}
+
+@keyframes stretch {
+    0% {width:100px}
+    100% {width: 80vw}
 }
